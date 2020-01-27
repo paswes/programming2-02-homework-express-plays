@@ -1,0 +1,29 @@
+<h1>Messages</h1>
+<ul class="message-list">
+    {{#file}}
+    <li class="message-list-item">
+        <div class="message-list-item__author">
+            {{author}}
+        </div>
+        <div class="message-list-item__date">
+            {{date}}
+        </div>
+        <div class="message-list-item__text">
+            {{text}}
+        </div>
+    </li>
+    {{/file}}
+</ul>
+<form action="/next" method="post">
+    <div class="form-row">
+        <label for="a">Author</label>
+        <input type="text" name="author" id="a">
+    </div>
+    <div class="form-row">
+        <label for="b">Text</label>
+        <textarea name="text" id="b" rows="4"></textarea>
+    </div>
+    <div class="form-controls">
+        <button type="submit">Senden</button>
+    </div>
+</form>
